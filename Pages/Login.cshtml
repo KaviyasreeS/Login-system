@@ -1,0 +1,8 @@
+@page
+@model HospitalSystemAPI.Pages.LoginModelPage
+<form method="post">
+    <input asp-for="Login.Email" placeholder="Email" />
+    <input asp-for="Login.Password" placeholder="Password" type="password" />
+    <button type="submit">Login</button>
+</form>
+<p>@Model.Message</p>
