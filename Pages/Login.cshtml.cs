@@ -1,34 +1,34 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using System.Net.Http;
-using System.Text;
-using System.Text.Json;
-using HospitalSystemAPI.Models;
+using System.ComponentModel.DataAnnotations;
+using HospitalSystemAPI.Data;
 
 namespace HospitalSystemAPI.Pages
 {
-    public class LoginModelPage : PageModel
+    public class LoginModel : PageModel
     {
-        [BindProperty]
-        public LoginModel Login { get; set; }
+        private readonly AppDbContext _context;
+        public LoginModel(AppDbContext context) => _context = context;
 
-        public string Message { get; set; }
+        [BindProperty, Required, EmailAddress]
+        public string Email { get; set; }
 
-        public async Task<IActionResult> OnPostAsync()
+        [BindProperty, Required, DataType(DataType.Password)]
+        public string Password { get; set; }
+
+        public IActionResult OnPost()
         {
-            using var client = new HttpClient();
-            var json = JsonSerializer.Serialize(Login);
-            var content = new StringContent(json, Encoding.UTF8, "application/json");
+            if (!ModelState.IsValid)
+                return Page();
 
-            var response = await client.PostAsync("https://localhost:5031/api/patient/login", content);
-            if (response.IsSuccessStatusCode)
+            var user = _context.Patients.FirstOrDefault(p => p.Email == Email && p.Password == Password);
+            if (user == null)
             {
-                Message = "Login successful!";
-                return RedirectToPage("Index", new { msg = Message });
+                ModelState.AddModelError("", "Invalid credentials");
+                return Page();
             }
 
-            Message = await response.Content.ReadAsStringAsync();
-            return Page();
+            return RedirectToPage("/Welcome", new { name = user.Name });
         }
     }
 }

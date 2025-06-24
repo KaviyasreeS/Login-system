@@ -140,6 +140,9 @@ C:\WNS_Training\Hopital_Mnagement_system_RL\HospitalSystemAPI\obj\Debug\net9.0\H
 C:\WNS_Training\Hopital_Mnagement_system_RL\HospitalSystemAPI\obj\Debug\net9.0\HospitalSystemAPI.csproj.CoreCompileInputs.cache
 C:\WNS_Training\Hopital_Mnagement_system_RL\HospitalSystemAPI\obj\Debug\net9.0\HospitalSystemAPI.MvcApplicationPartsAssemblyInfo.cs
 C:\WNS_Training\Hopital_Mnagement_system_RL\HospitalSystemAPI\obj\Debug\net9.0\HospitalSystemAPI.MvcApplicationPartsAssemblyInfo.cache
+C:\WNS_Training\Hopital_Mnagement_system_RL\HospitalSystemAPI\obj\Debug\net9.0\HospitalSystemAPI.RazorAssemblyInfo.cache
+C:\WNS_Training\Hopital_Mnagement_system_RL\HospitalSystemAPI\obj\Debug\net9.0\HospitalSystemAPI.RazorAssemblyInfo.cs
+C:\WNS_Training\Hopital_Mnagement_system_RL\HospitalSystemAPI\obj\Debug\net9.0\HospitalSystemAPI.sourcelink.json
 C:\WNS_Training\Hopital_Mnagement_system_RL\HospitalSystemAPI\obj\Debug\net9.0\scopedcss\bundle\HospitalSystemAPI.styles.css
 C:\WNS_Training\Hopital_Mnagement_system_RL\HospitalSystemAPI\obj\Debug\net9.0\staticwebassets.build.json
 C:\WNS_Training\Hopital_Mnagement_system_RL\HospitalSystemAPI\obj\Debug\net9.0\staticwebassets.build.json.cache
@@ -151,5 +154,3 @@ C:\WNS_Training\Hopital_Mnagement_system_RL\HospitalSystemAPI\obj\Debug\net9.0\r
 C:\WNS_Training\Hopital_Mnagement_system_RL\HospitalSystemAPI\obj\Debug\net9.0\HospitalSystemAPI.pdb
 C:\WNS_Training\Hopital_Mnagement_system_RL\HospitalSystemAPI\obj\Debug\net9.0\HospitalSystemAPI.genruntimeconfig.cache
 C:\WNS_Training\Hopital_Mnagement_system_RL\HospitalSystemAPI\obj\Debug\net9.0\ref\HospitalSystemAPI.dll
-C:\WNS_Training\Hopital_Mnagement_system_RL\HospitalSystemAPI\obj\Debug\net9.0\HospitalSystemAPI.RazorAssemblyInfo.cache
-C:\WNS_Training\Hopital_Mnagement_system_RL\HospitalSystemAPI\obj\Debug\net9.0\HospitalSystemAPI.RazorAssemblyInfo.cs

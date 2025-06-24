@@ -1,30 +1,32 @@
 using HospitalSystemAPI.Data;
 using Microsoft.EntityFrameworkCore;
-
+using Microsoft.OpenApi.Models;
 var builder = WebApplication.CreateBuilder(args);
 
-// Register DB + Controllers
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlite("Data Source=Hospital.db"));
 
+builder.Services.AddRazorPages();
 builder.Services.AddControllers();
-builder.Services.AddRazorPages(); // 👈 Add this line
-
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
+builder.Services.AddHttpClient();
 var app = builder.Build();
+
 app.UseHttpsRedirection();
-app.UseStaticFiles(); // 👈 For serving CSS/JS if needed
-
+app.UseStaticFiles();
 app.UseRouting();
-
 app.UseAuthorization();
 
-app.MapControllers(); // API routes
-app.MapRazorPages();  // Razor Pages routes
+app.MapControllers();
+app.MapRazorPages();
 
-app.UseSwagger();
-app.UseSwaggerUI();
+// 👇 Default to Login
+app.MapGet("/", context =>
+{
+    context.Response.Redirect("/Login");
+    return Task.CompletedTask;
+});
+
 
 app.Run();
